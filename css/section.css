@@ -13,7 +13,7 @@ HERO
             rgba(10, 25, 47, 0.85)
             /* Cor mais opaca na parte inferior */
         ),
-        url("../imagem/imagemhero.webp");
+        url("../imagem/imagemHero.webp");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
