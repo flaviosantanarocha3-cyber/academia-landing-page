@@ -1,0 +1,135 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@700&display=swap');
+
+/*
+RESET
+--------------------------------------------------------
+*/
+/* Reseta margens, paddings e define o box-sizing global */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Remove a lista de estilos (pontos) de todas as listas */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Remove sublinhado de links e herda a cor */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Garante que imagens e vídeos não ultrapassam o tamanho do contentor */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+PADRAO-FONTES
+--------------------------------------------------------
+*/
+html {
+    font-size: 62.5%;
+  
+    scroll-behavior: smooth;
+    /* rolagem suave ao clicar nos links do menu */
+}
+
+/* Títulos com a fonte Oswald (Peso 700) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Texto normal com a fonte Montserrat (Peso 400) */
+body,
+p,
+span,
+li,
+input,
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+body {
+
+    min-height: 100vh;
+    background-color: #0a192f;
+    color: #fff;
+    padding-top: 8rem;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 121.6rem;
+    margin: 0 auto;
+    padding: 0 1.6rem;
+}
+
+:root {
+    /* Cores */
+    --cor-fundo-primario: #0a192f;
+    --cor-fundo-secundario: #071426;
+    --cor-card: #0f2340;
+    --cor-borda: #1d3a5f;
+    --cor-texto-primario: #fff;
+    --cor-texto-secundario: #dbe6f3;
+    --cor-texto-terciario: #8ba3c2;
+    --cor-texto-quaternario: #c7d2e3;
+    --cor-destaque: #00b4d8;
+    --cor-destaque-hover: #0096b7;
+    --cor-destaque-claro: #33c6e0;
+    --cor-azul-claro: #90e0ef;
+    --cor-placeholder: #5c7292;
+    
+    /* Espaçamentos (múltiplos de 8) */
+    --espaco-8: 0.8rem;
+    --espaco-16: 1.6rem;
+    --espaco-24: 2.4rem;
+    --espaco-32: 3.2rem;
+    --espaco-48: 4.8rem;
+    --espaco-64: 6.4rem;
+    --espaco-80: 8rem;
+    --espaco-96: 9.6rem;
+
+    /* Fontes */
+    --fonte-titulo: 'Oswald', sans-serif;
+    --fonte-texto: 'Montserrat', sans-serif;
+
+    /* Border radius */
+    --radius-sm: 0.8rem;
+    --radius-md: 1.2rem;
+    --radius-lg: 1.6rem;
+    --radius-xl: 2.4rem;
+    
+    /* Transições */
+    --transicao-rapida: 0.3s ease;
+    --transicao-media: 0.5s ease;
+}

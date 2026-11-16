@@ -1,0 +1,532 @@
+
+/*
+HERO
+--------------------------------------------------------
+*/
+.hero {
+
+    height: 100vh;
+
+    background-image:
+        linear-gradient(rgba(10, 25, 47, 0.75),
+            /* Cor escura com transparência no topo (usei o azul escuro da sua paleta) */
+            rgba(10, 25, 47, 0.85)
+            /* Cor mais opaca na parte inferior */
+        ),
+        url("../imagem/imagemhero.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+
+.hero .container {
+    width: 100%;
+    max-width: 121.6rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero .texto-hero {
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.hero .texto-hero h1 {
+
+    font-size: 4rem;
+    text-align: center;
+    color: #fff;
+    line-height: 1;
+}
+
+.hero .texto-hero h1 span {
+    display: block;
+    font-size: 10rem;
+    color: #90e0ef;
+    text-transform: uppercase;
+    font-style: italic;
+
+}
+
+/*
+SECAO SOBRE NOS
+--------------------------------------------------------
+*/
+.sobre .container {
+    width: 100%;
+    padding: 8rem 1.6rem;
+    min-height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.sobre h2 {
+    font-size: 5rem;
+    /* título destacado */
+    margin-bottom: 2.4rem;
+    color: #90e0ef;
+    font-style: italic;
+}
+
+.sobre p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 80rem;
+    color: #fff;
+
+}
+
+/*
+SECAO PLANOS
+--------------------------------------------------------
+*/
+.planos {
+    padding: 9.6rem 0;
+    background-color: #071426;
+    /* tom mais escuro que o fundo, destaca a seção */
+}
+
+.container-planos {
+    width: 100%;
+    max-width: 121.6rem;
+    margin: 0 auto;
+    padding: 0 1.6rem;
+}
+
+/* a fileira de cards: 3 colunas no computador */
+.planos-caixa {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.2rem;
+    align-items: stretch;
+}
+
+.plano-card {
+    background-color: #0f2340;
+    border: 0.1rem solid #1d3a5f;
+    border-radius: 1.6rem;
+    padding: 3.2rem 2.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+
+}
+
+.plano-card:hover {
+    transform: translateY(-0.8rem);
+    border-color: #00b4d8;
+
+}
+
+.plano-nome {
+    font-size: 2.4rem;
+    color: #fff;
+    margin-bottom: 1.6rem;
+
+}
+
+.plano-preco {
+    font-size: 4.8rem;
+    font-weight: 700;
+    color: #00b4d8;
+    margin-bottom: 2.4rem;
+
+}
+
+.plano-centavos {
+    font-size: 2.4rem;
+
+}
+
+.plano-periodo {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #c7d2e3;
+    margin-left: 0.8rem;
+
+}
+
+.plano-lista {
+    width: 100%;
+    margin-bottom: 3.2rem;
+
+}
+
+.plano-item {
+    font-size: 1.6rem;
+    color: #dbe6f3;
+    padding: 1.6rem 0;
+    border-bottom: 0.1rem dashed #1d3a5f;
+    text-align: center;
+
+}
+
+.plano-item:last-child {
+    border-bottom: none;
+
+}
+
+/* o botão de cada plano cresce e preenche o pé do card */
+.plano-botao {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    padding: 1.6rem;
+    background-color: transparent;
+    color: #00b4d8;
+    border: 0.2rem solid #00b4d8;
+    border-radius: 1.2rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+
+}
+
+.plano-botao:hover {
+    background-color: #00b4d8;
+    color: #0a192f;
+
+}
+
+/* o card do plano mais vendido ganha destaque ciano */
+.plano-destaque {
+    border: 0.2rem solid #00b4d8;
+    position: relative;
+    /* necessário para a etiqueta se posicionar nele */
+
+}
+
+.plano-destaque .plano-botao {
+    background-color: #00b4d8;
+    color: #0a192f;
+
+}
+
+.plano-destaque .plano-botao:hover {
+    background-color: #33c6e0;
+
+}
+
+/* etiqueta flutuante no topo do card em destaque */
+.plano-etiqueta {
+    position: absolute;
+    top: -1.6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #00b4d8, #90e0ef);
+    color: #0a192f;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding: 0.8rem 1.6rem;
+    border-radius: 2.4rem;
+
+}
+
+/*
+IMAGEM (GALERIA)
+--------------------------------------------------------
+*/
+.galeria {
+    width: 100%;
+    max-width: 121.6rem;
+    margin: 0 auto;
+    padding: 8rem 0;
+
+}
+
+.galeria h2 {
+
+    font-size: 5rem;
+    color: #90e0ef;
+    margin-bottom: 2.4rem;
+    font-style: italic;
+    text-align: center;
+
+}
+
+.galeria p {
+
+    font-size: 1.6rem;
+
+    line-height: 1.6;
+    text-align: center;
+    color: #fff;
+    padding: 3.2rem 0;
+}
+
+/* SWIPER
+    */
+.swiper {
+    width: 100%;
+    height: 48rem;
+
+    /* altura do carrossel */
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 1.6rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 0.3rem 0.8rem;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.swiper-slide img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 1.2rem 2.5rem rgba(0, 0, 0, 0.4);
+}
+
+/* setas do carrossel na cor da paleta (o padrão é azul do swiper) */
+.swiper-button-prev,
+.swiper-button-next {
+    color: #90e0ef;
+}
+
+/* bolinhas da paginação na cor da paleta */
+.swiper-pagination-bullet-active {
+    background-color: #90e0ef;
+}
+
+/*
+TITULOS PADRAO DAS SECOES NOVAS
+--------------------------------------------------------
+*/
+.section-title {
+    font-size: 4.8rem;
+    color: #90e0ef;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 1.6rem;
+}
+
+.section-subtitulo {
+    font-size: 1.6rem;
+    color: #c7d2e3;
+    text-align: center;
+    margin-bottom: 4.8rem;
+}
+
+
+/*
+SECAO DEPOIMENTOS
+--------------------------------------------------------
+*/
+.testimonials {
+    padding: 9.6rem 0;
+    
+
+}
+
+/* fileira de depoimentos: 3 colunas */
+.depoimentos-caixa {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.2rem;
+    
+
+}
+
+.depoimento-card {
+    background-color: #0f2340;
+    border: 0.1rem solid #1d3a5f;
+    border-radius: 1.6rem;
+    padding: 3.2rem 2.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+
+}
+
+.depoimento-card:hover {
+    transform: translateY(-0.8rem);
+
+}
+
+.depoimento-texto {
+    font-size: 1.6rem;
+    font-style: italic;
+    line-height: 1.7;
+    color: #dbe6f3;
+    margin-bottom: 2.4rem;
+
+}
+
+.depoimento-autor {
+    font-size: 1.6rem;
+    color: #90e0ef;
+    margin-bottom: 0.8rem;
+
+}
+
+.depoimento-funcao {
+    font-size: 1.3rem;
+    color: #8ba3c2;
+
+}
+
+/*
+SECAO CONTATO
+--------------------------------------------------------
+*/
+.contact {
+    padding: 9.6rem 0;
+    background-color: #071426;
+
+}
+
+/* grade de 2 colunas: info à esquerda, formulário à direita */
+.contato-caixa {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6.4rem;
+    align-items: start;
+
+}
+
+.contato-item img {
+
+    width: 3rem;
+}
+
+/* informações de contato */
+.contato-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+
+}
+
+.contato-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    border-left: 0.4rem solid #00b4d8;
+    padding-left: 1.6rem;
+
+}
+
+.contato-rotulo {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: #8ba3c2;
+
+}
+
+.contato-valor {
+    font-size: 1.6rem;
+    color: #fff;
+
+}
+
+/* formulário de contato */
+.formulario-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    background-color: #0f2340;
+    border: 0.1rem solid #1d3a5f;
+    border-radius: 1.6rem;
+    padding: 3.2rem 2.4rem;
+
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+}
+
+.form-group label {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: #8ba3c2;
+
+}
+
+.form-group input,
+.form-group textarea {
+    background-color: #0a192f;
+    border: 0.1rem solid #1d3a5f;
+    border-radius: 0.8rem;
+    padding: 1.6rem;
+    font-size: 1.6rem;
+    color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    resize: vertical;
+
+}
+
+/* acende a borda ciano quando o campo está selecionado */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #00b4d8;
+    box-shadow: 0 0 0 0.3rem rgba(0, 180, 216, 0.2);
+
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #5c7292;
+
+}
+
+.botao-form {
+    padding: 1.6rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: #00b4d8;
+    border: none;
+    border-radius: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+.botao-form:hover {
+    background-color: #33c6e0;
+    transform: translateY(-0.8rem);
+    box-shadow: 0 0.8rem 2.4rem rgba(0, 180, 216, 0.35);
+
+}
+
+
+/*
+RODAPE
+--------------------------------------------------------
+*/
+.rodape {
+    padding: 4rem 2rem;
+    text-align: center;
+    border-top: 0.1rem solid #1d3a5f;
+
+}
+
+.rodape-texto {
+    font-size: 1.4rem;
+    color: #8ba3c2;
+
+}
+

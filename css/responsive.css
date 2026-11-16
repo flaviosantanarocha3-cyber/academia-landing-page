@@ -1,0 +1,396 @@
+
+/*
+MENU MOBILE
+--------------------------------------------------------
+botão de 3 linhas: só aparece no celular (display:none aqui)
+*/
+.botao-menu-mobile {
+    display: none;
+    flex-direction: column;
+    gap: 0.8rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.8rem;
+
+}
+
+.linha-menu {
+    width: 2.8rem;
+    height: 0.3rem;
+    background-color: #90e0ef;
+    border-radius: 0.2rem;
+    transition: all 0.3s ease;
+
+}
+
+/* quando o menu está aberto, as linhas viram um X */
+.botao-menu-mobile.menu-aberto .linha-menu:nth-child(1) {
+    transform: rotate(45deg) translate(0.6rem, 0.6rem);
+
+}
+
+.botao-menu-mobile.menu-aberto .linha-menu:nth-child(2) {
+    opacity: 0;
+
+}
+
+.botao-menu-mobile.menu-aberto .linha-menu:nth-child(3) {
+    transform: rotate(-45deg) translate(0.5rem, -0.5rem);
+
+}
+
+/*
+RESPONSIVO
+--------------------------------------------------------
+ breakpoints: tablet até 1024px e celular até 768px
+*/
+@media (max-width: 1024px) {
+
+    .container nav ul {
+        gap: 3.2rem;
+
+    }
+
+    .hero .texto-hero h1 span {
+        font-size: 7.2rem;
+
+    }
+
+    /* 3 colunas viram 1: cards empilham */
+    .planos-caixa {
+        grid-template-columns: 1fr;
+        max-width: 48rem;
+        margin: 0 auto;
+
+    }
+
+    .depoimentos-caixa {
+        grid-template-columns: 1fr;
+        max-width: 48rem;
+        margin: 0 auto;
+
+    }
+
+    /* contato vira 1 coluna: info em cima, form embaixo */
+    .contato-caixa {
+        grid-template-columns: 1fr;
+        gap: 4.8rem;
+
+    }
+
+    .sobre h2,
+    .galeria h2,
+    .section-title {
+        font-size: 4rem;
+
+    }
+
+    .swiper {
+        height: 38rem;
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    /* ---- menu vira hamburguer ---- */
+    .botao-menu-mobile {
+        display: flex;
+
+    }
+
+    /* navegação escondida: o script.js adiciona .menu-aberto */
+    .menu-navegacao {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(7, 20, 38, 0.97);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+
+    }
+
+    .menu-navegacao.menu-aberto {
+        max-height: 40rem;
+        border-bottom: 0.1rem solid #1d3a5f;
+
+    }
+
+    .menu-navegacao ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 2.4rem 0;
+
+    }
+
+    .menu-navegacao a {
+        display: block;
+        padding: 1.6rem;
+        text-align: center;
+
+    }
+
+    /* estilo do botão de contato dentro do menu mobile */
+    .botao-contato-mobile {
+        background-color: #00b4d8;
+        color: #0a192f;
+        font-weight: 700;
+        border-radius: 1.2rem;
+        margin: 0.8rem 1.6rem;
+    }
+
+    .botao-contato-mobile:hover {
+        background-color: #33c6e0;
+    }
+
+    /* adiciona botão de contato dentro do menu mobile */
+    .menu-navegacao ul li:last-child {
+        margin-top: 1.6rem;
+        padding-top: 1.6rem;
+        border-top: 0.1rem solid #1d3a5f;
+    }
+
+    /* botão de contato some no espaço do celular */
+    .botao-contato {
+        display: none;
+
+    }
+     .hero {
+        background-size: cover;
+
+    }
+
+    .hero .texto-hero h1 {
+        font-size: 2.8rem;
+
+    }
+
+    .hero .texto-hero h1 span {
+        font-size: 4.8rem;
+
+    }
+
+    .sobre h2,
+    .galeria h2,
+    .section-title {
+        font-size: 2.4rem;
+
+    }
+
+    .sobre p,
+    .galeria p,
+    .section-subtitulo {
+        font-size: 1.4rem;
+        text-align: justify;
+        letter-spacing: 1px;
+
+    }
+    .section-subtitulo{
+        text-align: center;
+
+    }
+    .depoimento-texto{
+        text-align: justify;
+    }
+
+    .swiper {
+        height: 26rem;
+
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+        /* setas ocupam espaço no celular: o dedo arrasta os slides */
+
+    }
+
+    .container-planos {
+        padding: 0 1.6rem
+
+    }
+
+    .plano-card,
+    .depoimento-card {
+        padding: 3.2rem 2.4rem;
+
+    }
+
+}
+
+@media (max-width: 560px) {
+
+    /* ---- menu vira hamburguer ---- */
+    .botao-menu-mobile {
+        display: flex;
+
+    }
+
+    /* navegação escondida: o script.js adiciona .menu-aberto */
+    .menu-navegacao {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(7, 20, 38, 0.97);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+
+    }
+
+    .menu-navegacao.menu-aberto {
+        max-height: 40rem;
+        border-bottom: 0.1rem solid #1d3a5f;
+
+    }
+
+    .menu-navegacao ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 2.4rem 0;
+
+    }
+
+    .menu-navegacao a {
+        display: block;
+        padding: 1.6rem;
+        text-align: center;
+
+    }
+
+    /* estilo do botão de contato dentro do menu mobile */
+    .botao-contato-mobile {
+        background-color: #00b4d8;
+        color: #0a192f;
+        font-weight: 700;
+        border-radius: 1.2rem;
+        margin: 0.8rem 1.6rem;
+    }
+
+    .botao-contato-mobile:hover {
+        background-color: #33c6e0;
+    }
+
+    /* adiciona botão de contato dentro do menu mobile */
+    .menu-navegacao ul li:last-child {
+        margin-top: 1.6rem;
+        padding-top: 1.6rem;
+        border-top: 0.1rem solid #1d3a5f;
+    }
+
+    /* botão de contato some no espaço do celular */
+    .botao-contato {
+        display: none;
+
+    }
+
+    .hero  {
+        background-size: cover;
+
+    }
+
+    .hero .texto-hero h1 {
+        font-size: 2.8rem;
+
+    }
+
+    .hero .texto-hero h1 span {
+        font-size: 4.8rem;
+
+    }
+
+    .sobre h2,
+    .galeria h2,
+    .section-title {
+        font-size: 2.4rem;
+
+    }
+
+    .sobre p,
+    .galeria p,
+    .section-subtitulo {
+        font-size: 1.4rem;
+        text-align: justify;
+
+    }
+
+    .swiper {
+        height: 26rem;
+
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+        /* setas ocupam espaço no celular: o dedo arrasta os slides */
+
+    }
+
+    .container-planos {
+        padding: 0 1.6rem
+
+    }
+    .section-subtitulo{
+        text-align: center;
+
+    }
+    .depoimento-texto{
+        text-align: justify;
+    }
+
+    .plano-card,
+    .depoimento-card {
+        padding: 3.2rem 2.4rem;
+
+    }
+
+}
+
+/*
+RODAPE RESPONSIVO
+--------------------------------------------------------
+*/
+@media (max-width: 480px) {
+    .container {
+        padding: 0 4%;
+
+    }
+
+    .hero {
+        background-size: cover;
+    }
+
+    .sobre p{
+        text-align: justify;
+        letter-spacing: 1px;
+    }
+
+    .galeria p {
+
+        text-align: justify;
+        letter-spacing: 1px;
+    }
+
+    .depoimento-texto {
+        
+        text-align: justify;
+        
+
+    }
+    
+    .rodape p {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+    }
+
+    .rodape a {
+        font-size: 1.2rem;
+        margin: 0.4rem 0;
+    }
+}

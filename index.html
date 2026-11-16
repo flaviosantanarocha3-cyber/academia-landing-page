@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LandingPage Academia</title>
+
+    <!-- SEO básico: ajuda o Google a entender e exibir sua página -->
+    <meta name="description"
+        content="Academia VitalFit: estrutura moderna, equipe dedicada e planos acessíveis para você construir o seu legado em cada treino.">
+    <meta name="keywords" content="academia, musculação, fitness, planos, VitalFit, treino, saúde">
+    <meta name="author" content="Academia VitalFit">
+
+    <!-- Conexão antecipada para acelerar o carregamento das fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Google Fonts: Oswald (Títulos) + Montserrat (Texto) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/geral.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/section.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!-- ============================================================
+         HERO: primeira tela do site (menu + frase de impacto)
+         id="inicio" criado para o link "Início" do menu funcionar
+         ============================================================ -->
+    <section class="hero" id="inicio">
+        <div class="menu-principal" id="menu-principal">
+            <div class="container">
+                <div class="logo">
+                    <img src="imagem/logo-sem-fundp.webp" alt="Logo da Academia VitalFit" class="logo-preto">
+                </div>
+
+                <!-- botão do menu no celular (o script.js liga/desliga ele) -->
+                <button class="botao-menu-mobile" id="botao-menu-mobile" aria-label="Abrir menu">
+                    <span class="linha-menu"></span>
+                    <span class="linha-menu"></span>
+                    <span class="linha-menu"></span>
+                </button>
+
+                <nav class="menu-navegacao" id="menu-navegacao">
+                    <ul>
+                        <!-- CORRIGIDO: "Sobre nos" -> "Sobre nós" (acentuação) -->
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#sobre">Sobre nós</a></li>
+                        <li><a href="#planos">Planos</a></li>
+                        <li><a href="#galeria">Galeria</a></li>
+                        <li><a href="#contato" class="botao-contato-mobile">Entre em contato</a></li>
+                    </ul>
+                </nav>
+
+                <a href="#contato" class="botao-contato">Entre em contato</a>
+            </div>
+        </div>
+
+        <article class="texto-hero">
+
+            <h1>Construa o seu legado <span>em cada treino</span></h1>
+        </article>
+    </section>
+
+    <!-- ============================================================
+         SOBRE NÓS
+         id="sobre" 
+         ============================================================ -->
+    <section class="sobre" id="sobre">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <p>“Na Academia VitalFit, acreditamos que o movimento é a base de uma vida equilibrada. Com uma equipe
+                dedicada e estrutura moderna, oferecemos um ambiente motivador para quem busca saúde, desempenho e
+                bem-estar todos os dias.”</p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         PLANOS 
+        ..
+         ============================================================ -->
+    <section class="planos" id="planos">
+        <div class="container-planos">
+            <h2 class="section-title">Nossos Planos</h2>
+            <p class="section-subtitulo">Escolha o plano ideal para o seu momento. Sem taxa de matrícula.</p>
+
+            <div class="planos-caixa">
+                <!-- plano simples -->
+                <div class="plano-card">
+                    <h3 class="plano-nome">Mensal</h3>
+                    <p class="plano-preco">R$ 99<span class="plano-centavos">,90</span><span
+                            class="plano-periodo">/mês</span></p>
+                    <ul class="plano-lista">
+                        <li class="plano-item">Acesso livre à musculação</li>
+                        <li class="plano-item">Avaliação física inicial</li>
+                        <li class="plano-item">Acesso ao app de treinos</li>
+                    </ul>
+                    <a href="#contato" class="plano-botao">Assinar plano</a>
+                </div>
+
+                <!-- plano em destaque (o mais vendido) -->
+                <div class="plano-card plano-destaque">
+                    <span class="plano-etiqueta">Mais vendido</span>
+                    <h3 class="plano-nome">Trimestral</h3>
+                    <p class="plano-preco">R$ 89<span class="plano-centavos">,90</span><span
+                            class="plano-periodo">/mês</span></p>
+                    <ul class="plano-lista">
+                        <li class="plano-item">Tudo do plano Mensal</li>
+                        <li class="plano-item">Aulas coletivas inclusas</li>
+                        <li class="plano-item">Acompanhamento nutricional</li>
+                        <li class="plano-item">Acesso a todas as unidades</li>
+                    </ul>
+                    <a href="#contato" class="plano-botao">Assinar plano</a>
+                </div>
+
+                <!-- plano econômico -->
+                <div class="plano-card">
+                    <h3 class="plano-nome">Anual</h3>
+                    <p class="plano-preco">R$ 69<span class="plano-centavos">,90</span><span
+                            class="plano-periodo">/mês</span></p>
+                    <ul class="plano-lista">
+                        <li class="plano-item">Tudo do plano Trimestral</li>
+                        <li class="plano-item">1 mês grátis</li>
+                        <li class="plano-item">Camiseta oficial de brinde</li>
+                    </ul>
+                    <a href="#contato" class="plano-botao">Assinar plano</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         GALERIA (carrossel Swiper)
+
+         ============================================================ -->
+    <section class="galeria" id="galeria">
+        <div class="container">
+            <h2>Força, saúde e superação.</h2>
+            <p>Na Nossa Academia, cada treino é uma oportunidade de evoluir. Aqui você encontra motivação,
+                disciplina e o apoio necessário para alcançar seus objetivos, seja melhorar a saúde, ganhar
+                condicionamento físico ou conquistar a melhor versão de si mesmo</p>
+
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="imagem/imagemesteira.webp" alt="Aluno treinando na academia 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imagem/imagem2.webp" alt="Aluno treinando na academia 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imagem/imagem3.webp" alt="Aluno treinando na academia 3">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imagem/imagem4.webp" alt="Aluno treinando na academia 4">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imagem/imagem5.webp" alt="Aluno treinando na academia 5">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imagem/imagemesteira.webp" alt="Aluno treinando na academia 6">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imagem/imagem7.webp" alt="Aluno treinando na academia 7">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imagem/imagem8.webp" alt="Aluno treinando na academia 8">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imagem/imagem9.webp" alt="Aluno treinando na academia 9">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imagem/imagem10.webp" alt="Aluno treinando na academia 10">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imagem/imagem11.webp" alt="Aluno treinando na academia 11">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imagem/imagem12.webp" alt="Aluno treinando na academia 12">
+                    </div>
+                </div>
+
+                <!-- Paginação -->
+                <div class="swiper-pagination"></div>
+
+                <!-- Botões de navegação -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         DEPOIMENTOS 
+         ============================================================ -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Depoimentos</h2>
+            <p class="section-subtitulo">Histórias reais de quem treina com a gente.</p>
+
+            <div class="depoimentos-caixa">
+                <div class="depoimento-card">
+                    <p class="depoimento-texto">“Treino na VitalFit há 2 anos e mudou minha rotina. Os professores
+                        acompanham de perto e o ambiente é muito motivador.”</p>
+                    <strong class="depoimento-autor">Carlos Mendes</strong>
+                    <span class="depoimento-funcao">Aluno há 2 anos</span>
+                </div>
+
+                <div class="depoimento-card">
+                    <p class="depoimento-texto">“Perdi 12kg com o acompanhamento da equipe. As aulas coletivas são
+                        divertidas e os horários cabem na minha agenda.”</p>
+                    <strong class="depoimento-autor">Juliana Ferreira</strong>
+                    <span class="depoimento-funcao">Aluna há 1 ano</span>
+                </div>
+
+                <div class="depoimento-card">
+                    <p class="depoimento-texto">“Estrutura impecável e aparelhos novos. O plano anual vale demais,
+                        melhor investimento que já fiz na minha saúde.”</p>
+                    <strong class="depoimento-autor">Rafael Souza</strong>
+                    <span class="depoimento-funcao">Aluno há 3 anos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         CONTATO (
+         id="contato" criado (o botão "Entre em contato" aponta para cá).
+        
+         ============================================================ -->
+    <section class="contact" id="contato">
+        <div class="container">
+            <h2 class="section-title">Contato</h2>
+            <p class="section-subtitulo">Venha nos visitar ou mande sua mensagem.</p>
+
+            <div class="contato-caixa">
+                <!-- informações da academia -->
+                <div class="contato-info">
+                    <div class="contato-item">
+                        <span class="contato-rotulo">Endereço</span>
+                        <span class="contato-valor">Rua das Palmeiras, 123 — Centro</span>
+                    </div>
+                    <div class="contato-item">
+                        <span class="contato-rotulo">Horários</span>
+                        <span class="contato-valor">Seg a Sex: 6h às 22h | Sáb: 8h às 14h</span>
+                    </div>
+                    <div class="contato-item">
+                        <span class="contato-rotulo"><img src="imagem/whatsapp-redimensionada.webp"></span>
+                        <span class="contato-valor">(11) 99999-9999</span>
+                    </div>
+                </div>
+
+                <!-- formulário de mensagem -->
+                <form class="formulario-contato" action="https://formspree.io/f/SEU-ID" method="POST">
+                    <div class="form-group">
+                        <label for="nome-contato">Nome</label>
+                        <input type="text" id="nome-contato" name="nome" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email-contato">E-mail</label>
+                        <input type="email" id="email-contato" name="email" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem-contato">Mensagem</label>
+                        <textarea id="mensagem-contato" name="mensagem" rows="5"
+                            placeholder="Quero conhecer a academia!" required></textarea>
+                    </div>
+                    <button type="submit" class="botao-form">Enviar mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         RODAPÉ (SEÇÃO NOVA)
+        
+         ============================================================ -->
+    <footer class="rodape">
+        <p class="rodape-texto">&copy; 2026 Academia VitalFit — Todos os direitos reservados</p>
+        <p>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+            <a href="#">Privacidade</a>
+        </p>
+    </footer>
+
+    <!-- JS do Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
