@@ -356,6 +356,11 @@ RODAPE RESPONSIVO
 --------------------------------------------------------
 */
 @media (max-width: 480px) {
+
+    html{
+
+        width: 100%;
+    }
     .container {
         padding: 0 4%;
 
@@ -392,5 +397,43 @@ RODAPE RESPONSIVO
     .rodape a {
         font-size: 1.2rem;
         margin: 0.4rem 0;
+    }
+}
+
+/* ---------- botao mobile sem cortar a direita em 360px ---------- */
+@media (max-width: 360px) {
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    header,
+    nav,
+    .header,
+    .navbar,
+    .navbar .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    /* Botao mobile / hamburguer */
+    .navbar-toggler,
+    .menu-toggle,
+    .hamburger,
+    button[aria-label*="menu" i],
+    button[aria-label*="nav" i],
+    nav button {
+        flex-shrink: 0 !important;
+        margin-right: 0 !important;
+        right: auto !important;
+        max-width: 44px;
     }
 }
