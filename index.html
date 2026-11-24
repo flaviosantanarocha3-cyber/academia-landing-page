@@ -24,8 +24,7 @@
     <meta property="og:description"
         content="Conheça nossa estrutura, planos e modalidades. Agende sua aula experimental pelo formulário ou diretamente pelo WhatsApp.">
     <meta property="og:url" content="https://academia-landing-page-phi.vercel.app/">
-    <meta property="og:image"
-        content="https://academia-landing-page-phi.vercel.app/imagem/img/banner.png">
+    <meta property="og:image" content="https://academia-landing-page-phi.vercel.app/imagem/img/banner.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
@@ -35,6 +34,7 @@
 
     <link rel="stylesheet" href="css/geral.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/section.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -46,33 +46,35 @@
          id="inicio" criado para o link "Início" do menu funcionar
          ============================================================ -->
     <section class="hero" id="inicio">
-        <div class="menu-principal" id="menu-principal">
-            <div class="container">
-                <div class="logo">
-                    <img src="imagem/logo-sem-fundp.webp" alt="Logo da Academia VitalFit" class="logo-preto">
+        <header>
+            <div class="menu-principal" id="menu-principal">
+                <div class="container">
+                    <div class="logo">
+                        <img src="imagem/logo-sem-fundp.webp" alt="Logo da Academia VitalFit" class="logo-preto">
+                    </div>
+
+
+                    <button class="botao-menu-mobile" id="botao-menu-mobile" aria-label="Abrir menu">
+                        <span class="linha-menu"></span>
+                        <span class="linha-menu"></span>
+                        <span class="linha-menu"></span>
+                    </button>
+
+                    <nav class="menu-navegacao" id="menu-navegacao">
+                        <ul>
+
+                            <li><a href="#inicio">Início</a></li>
+                            <li><a href="#sobre">Sobre nós</a></li>
+                            <li><a href="#planos">Planos</a></li>
+                            <li><a href="#galeria">Galeria</a></li>
+                            <li><a href="#contato" class="botao-contato-mobile">Entre em contato</a></li>
+                        </ul>
+                    </nav>
+
+                    <a href="#contato" class="botao-contato">Entre em contato</a>
                 </div>
-
-                <!-- botão do menu no celular (o script.js liga/desliga ele) -->
-                <button class="botao-menu-mobile" id="botao-menu-mobile" aria-label="Abrir menu">
-                    <span class="linha-menu"></span>
-                    <span class="linha-menu"></span>
-                    <span class="linha-menu"></span>
-                </button>
-
-                <nav class="menu-navegacao" id="menu-navegacao">
-                    <ul>
-                        <!-- CORRIGIDO: "Sobre nos" -> "Sobre nós" (acentuação) -->
-                        <li><a href="#inicio">Início</a></li>
-                        <li><a href="#sobre">Sobre nós</a></li>
-                        <li><a href="#planos">Planos</a></li>
-                        <li><a href="#galeria">Galeria</a></li>
-                        <li><a href="#contato" class="botao-contato-mobile">Entre em contato</a></li>
-                    </ul>
-                </nav>
-
-                <a href="#contato" class="botao-contato">Entre em contato</a>
             </div>
-        </div>
+        </header>
 
         <article class="texto-hero">
 

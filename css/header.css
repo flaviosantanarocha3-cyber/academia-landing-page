@@ -1,77 +1,86 @@
+/* ==========================================================================
+   06. VARIÁVEIS DE CORES (MENU PRINCIPAL, NAVEGAÇÃO E BOTÕES)
+   ========================================================================== */
+:root {
+    --color-menu-rolou-bg: rgba(11, 25, 46, 0.8);
+    --color-nav-link-hover: #90e0ef;
+    --color-cta-cyan: #00b4d8;
+    --color-cta-cyan-hover: #0096b7;
+    --color-cta-cyan-glow: rgba(0, 180, 216, 0.35);
+    --color-text-white: #ffffff;
+}
 
+/* ==================== MENU PRINCIPAL ==================== */
+
+/* Transição suave de cor compartilhada entre links da navegação */
+
+.menu-navegacao a:hover,
+.container nav ul a {
+    transition: color 0.3s ease;
+}
+
+/* Base visual compartilhada entre botões de ação (.container button e .botao-contato) */
+.container button,
+.botao-contato {
+    padding: 1.6rem 3.2rem;
+    /* REPETIDO: font-size: 1.6rem já usado no p base */
+    font-size: 1.6rem;
+    background-color: var(--color-cta-cyan);
+    border-radius: 1.6rem;
+    font-weight: 600;
+}
+
+/* Transição unificada dos botões e do menu principal */
+.container button,
+.botao-contato,
+.menu-principal {
+    transition: all 0.3s;
+}
 
 .logo img {
-
     max-width: 8rem;
-
 }
 
 .menu-principal {
+
     padding: 2.4rem 0;
     position: fixed;
+
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
-
-
-
-    transition: background-color 0.5s ease, padding 0.5s ease;
 }
 
 /* quando o script.js adiciona a classe .rolou ao rolar a página */
 #menu-principal.rolou {
-    background-color: rgba(11, 25, 46, 0.8);
+    background-color: var(--color-menu-rolou-bg);
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
     padding: 1rem 0;
 }
 
 .menu-navegacao a:hover {
-    color: #90e0ef;
-    transition: color 0.3s ease;
+    color: var(--color-nav-link-hover);
 }
 
 .container nav ul {
+
     display: flex;
     gap: 8rem;
-
 }
 
 .container nav ul a {
-
-    color: #fff;
-    transition: color 0.3s ease;
+    color: var(--color-text-white);
     font-size: 1.5rem;
 }
 
-.container button {
-
-    padding: 1.6rem 3.2rem;
-    font-size: 1.6rem;
-    cursor: pointer;
-    background-color: #00b4d8;
-    border: none;
-    border-radius: 1.6rem;
-    font-weight: 600;
-    transition: all 0.5s;
-
-}
-
 .botao-contato {
-    padding: 1.6rem 3.2rem;
-    font-size: 1.6rem;
-    cursor: pointer;
-    background-color: #00b4d8;
-    border: none;
-    border-radius: 1.6rem;
-    font-weight: 600;
-    color: #fff;
-    transition: all 0.5s;
+    color: var(--color-text-white);
 }
 
 .botao-contato:hover {
-    background-color: #0096b7;
-    transform: translateY(-0.8rem);
-    box-shadow: 0 0.8rem 2.4rem rgba(0, 180, 216, 0.35);
+    background-color: var(--color-cta-cyan-hover);
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.4rem 1.2rem var(--color-cta-cyan-glow);
 }

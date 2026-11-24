@@ -1,0 +1,59 @@
+/* ==========================================================================
+   07. HERO (VARIÁVEIS DE CORES, COMPARTILHAMENTOS E ORGANIZAÇÃO)
+   ========================================================================== */
+:root {
+    --cor-hero-overlay-top: rgba(10, 25, 47, 0.75);
+    --cor-hero-overlay-bottom: rgba(10, 25, 47, 0.85);
+    --cor-hero-titulo: #fff;
+    --cor-hero-destaque: #90e0ef;
+}
+
+/* Centralização flex compartilhada entre o container da hero e o bloco de texto */
+.hero .container,
+.hero .texto-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero {
+    height: 100vh;
+    background-image:
+        linear-gradient(
+            var(--cor-hero-overlay-top),
+            var(--cor-hero-overlay-bottom)
+        ),
+        url("../imagem/imagemHero.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero .container {
+   
+    max-width: 121.6rem;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.hero .texto-hero {
+    height: 100%;
+}
+
+.hero .texto-hero h1 {
+    
+    font-size: 4rem;
+    text-align: center;
+    color: var(--cor-hero-titulo);
+    line-height: 1;
+}
+
+.hero .texto-hero h1 span {
+    display: block;
+    font-size: 10rem;
+
+    color: var(--cor-hero-destaque);
+    text-transform: uppercase;
+    font-style: italic;
+}

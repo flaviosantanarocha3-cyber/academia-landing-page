@@ -1,32 +1,49 @@
-.rodape {
-
-    color: #fff;
-    text-align: center;
-    padding: 1.25rem;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    background-color: #0a192f;
-
+/* ==========================================================================
+   09. VARIÁVEIS DE CORES E RODAPÉ
+   ========================================================================== */
+:root {
+    --cor-rodape-texto-claro: #fff;
+    --cor-rodape-fundo: #0a192f;
+    --cor-rodape-borda: #1d3a5f;
+    --cor-rodape-texto-suave: #8ba3c2;
 }
 
-.rodape-texto {
-    font-size: 1rem;
-    color: #fff;
-    text-align: center;
-    padding: 0.8rem 0;
-    font-size: 1.5rem;
+.rodape {
 
+    
+    width: 100%;
+    background-color: var(--cor-rodape-fundo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    text-align: center;
+}
+
+.rodape,
+.rodape-texto {
+
+    color: var(--cor-rodape-texto-claro);
 }
 
 .rodape a {
-    color: #fff;
-    text-decoration: none;
+
     margin: 0 0.625rem;
+}
+
+.rodape a,
+.rodape-texto {
+
     font-size: 1.4rem;
 }
 
 .rodape a:hover {
     text-decoration: underline;
+}
 
+
+.rodape-texto {
+
+    color: var(--cor-rodape-texto-suave);
 }

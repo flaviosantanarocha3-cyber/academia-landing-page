@@ -103,68 +103,27 @@ linksDoMenu.forEach((link) => {
 });
 
 
-// Estrutura base: passar o seletor da classe
-ScrollReveal().reveal('.texto-hero h1', {
-  duration: 2000,
-  origin: 'left',
-  distance: '15%',
+// ScrollReveal: revela cada seção UMA vez ao entrar na tela.
+// reset: false evita que o conteúdo fique invisível (opacity: 0)
+// toda vez que o usuário rola para cima e para baixo.
+// Se o CDN falhar, a página continua funcionando sem animação.
+if (window.ScrollReveal) {
+const scrollReveal = new ScrollReveal({
+  duration: 1500,
+  distance: '10%',
   opacity: 0,
   scale: 0.95,
-  reset: true       // se deve repetir ao rolar novamente
+  reset: false
 });
 
-ScrollReveal().reveal('.texto-hero span', {
-  duration: 2000,
-  origin: 'right',
-  distance: '15%',
-  opacity: 0,
-  scale: 0.95,
-  reset: true       // se deve repetir ao rolar novamente
-});
-
-ScrollReveal().reveal('.sobre ', {
-  duration: 2000,
-  origin: 'botton',
-  distance: '20%',
-  opacity: 0,
-  scale: 0.95,
-  reset: true       // se deve repetir ao rolar novamente
-});
-
-ScrollReveal().reveal('.planos ', {
-  duration: 2000,
-  origin: 'bottom',
-  distance: '20%',
-  opacity: 0,
-  scale: 0.95,
-  reset: true       // se deve repetir ao rolar novamente
-});
-
-ScrollReveal().reveal('.galeria ', {
-  duration: 2000,
-  origin: 'right',
-  distance: '20%',
-  opacity: 0,
-  scale: 0.95,
-  reset: true       // se deve repetir ao rolar novamente
-});
-
-ScrollReveal().reveal('.testimonials ', {
-  duration: 2000,
-  origin: 'left',
-  distance: '20%',
-  opacity: 0,
-  scale: 0.95,
-  reset: true       // se deve repetir ao rolar novamente
-});
-
-ScrollReveal().reveal('.contact ', {
-  duration: 2000,
-  origin: 'bottom',
-  distance: '20%',
-  opacity: 0,
-  scale: 0.90,
-  reset: true       // se deve repetir ao rolar novamente
-});
+// títulos e textos animam a partir de direções diferentes
+scrollReveal.reveal('.texto-hero h1', { origin: 'left', distance: '15%', scale: 0.50 });
+scrollReveal.reveal('.texto-hero h1 span', { origin: 'right', distance: '15%', scale: 0.50 });
+scrollReveal.reveal('.sobre', { origin: 'bottom' });
+scrollReveal.reveal('.planos', { origin: 'bottom' });
+scrollReveal.reveal('.galeria', { origin: 'right' });
+scrollReveal.reveal('.testimonials', { origin: 'left' });
+scrollReveal.reveal('.contact', { origin: 'bottom', scale: 0.90 });
+}
 
 
